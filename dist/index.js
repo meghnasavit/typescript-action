@@ -341,6 +341,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(__webpack_require__(470));
 function run() {
     const name = core.getInput('my_input');
+    console.log("fsdfdsfdsfddddds");
     if (name) {
         core.debug(`Hello ${name}!`);
         return core.setOutput('my_output', `Hello ${name}!`);

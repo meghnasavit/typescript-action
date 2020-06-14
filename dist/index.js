@@ -5929,9 +5929,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(__webpack_require__(470));
 const github = __importStar(__webpack_require__(469));
 function run() {
+    const myToken = core.getInput('accessToken');
     const name = core.getInput('my_input');
     console.log("fsdfdsfdsfddddds");
-    const octokit = github.getOctokit('bb67194b142e4234b2f165d08b156dce1247db95');
+    const octokit = github.getOctokit(myToken);
     const { owner, repo } = github.context.repo;
     const event_type = 'custom';
     octokit.repos.createDispatchEvent({

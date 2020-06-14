@@ -3,9 +3,10 @@ import { Octokit } from '@octokit/rest';
 import * as github from '@actions/github';
 
 function run() {
+  const myToken = core.getInput('accessToken');
   const name: string = core.getInput('my_input');
   console.log("fsdfdsfdsfddddds");
-  const octokit = github.getOctokit('bb67194b142e4234b2f165d08b156dce1247db95')
+  const octokit = github.getOctokit(myToken)
   const { owner, repo } = github.context.repo;
   const event_type = 'custom';
   octokit.repos.createDispatchEvent({

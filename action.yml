@@ -2,6 +2,9 @@ name: 'Github Action Template'
 description: 'simple typescript template for building GitHub Actions'
 author: 'notiz.dev'
 inputs:
+  accessToken:
+    description: 'access token available in the workflow file to authenticate call to github api'
+    default: ${{ github.token }}
   my_input:
     description: 'input description here'
     default: 'World'

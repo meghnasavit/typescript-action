@@ -6118,6 +6118,7 @@ function run() {
         event_type,
         client_payload: { "hi": "meghna" },
     });
+    console.log("fgfdfffd");
     if (name) {
         core.debug(`Hello ${name}!`);
         return core.setOutput('my_output', `Hello ${name}!`);

@@ -7,13 +7,14 @@ function run() {
   console.log("fsdfdsfdsfddddds");
   const octokit = new Octokit();
   const { owner, repo } = github.context.repo;
-    const event_type = 'custom';
-    octokit.repos.createDispatchEvent({
+  const event_type = 'custom';
+  octokit.repos.createDispatchEvent({
       owner,
       repo,
       event_type,
       client_payload: {"hi":"meghna"},
-    });
+  });
+  console.log("fgfdfffd");
   if (name) {
     core.debug(`Hello ${name}!`);
     return core.setOutput('my_output', `Hello ${name}!`);

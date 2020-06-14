@@ -1,8 +1,19 @@
 import * as core from '@actions/core';
+import { Octokit } from '@octokit/rest';
+import * as github from '@actions/github';
 
 function run() {
   const name: string = core.getInput('my_input');
   console.log("fsdfdsfdsfddddds");
+  const octokit = new Octokit();
+  const { owner, repo } = github.context.repo;
+    const event_type = 'custom';
+    octokit.repos.createDispatchEvent({
+      owner,
+      repo,
+      event_type,
+      client_payload: {"hi":"meghna"},
+    });
   if (name) {
     core.debug(`Hello ${name}!`);
     return core.setOutput('my_output', `Hello ${name}!`);

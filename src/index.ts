@@ -31,7 +31,7 @@ function run() {
       event_type,
       client_payload: payload,
   });
-  console.log("fgfdfffd");
+  console.log("fgfffd");
   if (name) {
     core.debug(`Hello ${name}!`);
     return core.setOutput('my_output', `Hello ${name}!`);

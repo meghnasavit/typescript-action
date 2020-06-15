@@ -9,11 +9,27 @@ function run() {
   const octokit = github.getOctokit(myToken)
   const { owner, repo } = github.context.repo;
   const event_type = 'custom';
+  const payload = {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "Container",
+        "items": [
+          {
+            "type": "TextBlock",
+            "text": "Youre Awesome"
+          },
+        ]
+      },
+    ]
+  }
   octokit.repos.createDispatchEvent({
       owner,
       repo,
       event_type,
-      client_payload: {"hi":"meghna"},
+      client_payload: payload,
   });
   console.log("fgfdfffd");
   if (name) {

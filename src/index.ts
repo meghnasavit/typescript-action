@@ -8,7 +8,7 @@ function run() {
   console.log("fsdfdsfdsfddddds");
   const octokit = github.getOctokit(myToken)
   const { owner, repo } = github.context.repo;
-  const event_type = 'custom';
+  const event_type = 'customs';
   const payload = {
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",

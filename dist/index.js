@@ -5934,7 +5934,7 @@ function run() {
     console.log("fsdfdsfdsfddddds");
     const octokit = github.getOctokit(myToken);
     const { owner, repo } = github.context.repo;
-    const event_type = 'custom';
+    const event_type = 'customs';
     const payload = {
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
@@ -5957,7 +5957,7 @@ function run() {
         event_type,
         client_payload: payload,
     });
-    console.log("fgfdfffd");
+    console.log("fgfffd");
     if (name) {
         core.debug(`Hello ${name}!`);
         return core.setOutput('my_output', `Hello ${name}!`);

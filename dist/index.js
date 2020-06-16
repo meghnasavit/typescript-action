@@ -5941,14 +5941,47 @@ function run() {
         "version": "1.0",
         "body": [
             {
+                "type": "ColumnSet",
+                "columns": [
+                    {
+                        "type": "Column",
+                        "width": "auto",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "weight": "bolder",
+                                "text": "Issue opened : ",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "size": "small",
+                                "isSubtle": true,
+                                "text": "Created by",
+                                "wrap": true,
+                                "spacing": "none",
+                                "separator": true
+                            }
+                        ]
+                    }
+                ],
+                "spacing": "large",
+                "separator": true
+            },
+            {
                 "type": "Container",
                 "items": [
                     {
-                        "type": "TextBlock",
-                        "text": "Youre Awesome Ishan"
-                    },
+                        "type": "FactSet",
+                        "facts": [
+                            {
+                                "title": "Repository: ",
+                                "value": "event-transformer"
+                            }
+                        ]
+                    }
                 ]
-            },
+            }
         ]
     };
     octokit.repos.createDispatchEvent({

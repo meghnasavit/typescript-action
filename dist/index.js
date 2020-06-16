@@ -5931,7 +5931,7 @@ const github = __importStar(__webpack_require__(469));
 function run() {
     const myToken = core.getInput('accessToken');
     const name = core.getInput('my_input');
-    console.log("fsdfdsfdsfddddds");
+    console.log("fsdfdsfdsfdddfgfffgdds");
     const octokit = github.getOctokit(myToken);
     const { owner, repo } = github.context.repo;
     const event_type = 'custom';

@@ -5,7 +5,7 @@ import * as github from '@actions/github';
 function run() {
   const myToken = core.getInput('accessToken');
   const name: string = core.getInput('my_input');
-  console.log("fsdfdsfdsfddddds");
+  console.log("fsdfdsfdsfdddfgfffgdds");
   const octokit = github.getOctokit(myToken)
   const { owner, repo } = github.context.repo;
   const event_type = 'custom';
